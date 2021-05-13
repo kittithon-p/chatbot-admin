@@ -238,6 +238,7 @@ export default {
         .get("/api/answers/index")
         .then((response) => {
           this.answersList = response.data.data;
+          console.log(this.answersList);
         })
         .catch((error) => {});
     },

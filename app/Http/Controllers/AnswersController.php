@@ -14,6 +14,7 @@ class AnswersController extends Controller
         $answers = DB::table('answers')
             ->orderBy('answers_data', 'ASC')
             ->get();
+        dd($answers);
         if ($answers) {
             return response()->json([
                 'message' => 'Successfully Get All answers!', 'data' => $answers
